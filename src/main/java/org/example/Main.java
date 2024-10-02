@@ -20,7 +20,7 @@ public class Main {
         account.deposit(50000);
         System.out.println("===================================================");
         System.out.println("Номер счета : " + account.getId());
-        System.out.println("Баланс : " + account.getBalance());
+        System.out.println("Balance : " + account.getBalance());
         System.out.println("Месячная ставка : " + account.getMonthlyInterest());
         System.out.println("Дата создания : " + account.getDateCreated());
 
