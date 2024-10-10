@@ -32,7 +32,19 @@ public class Account {
         //transactions.add(new Transaction(Date.from(Instant.now()),'!',balance,balance,"Создание счета"));
 
     }
-
+    public String getname(){
+        return name;
+    }
+    public void showTransactions(){
+        System.out.println("\nТранзакции пользователя с id-"+id+"\n");
+        for(Transaction t : transactions){
+            System.out.println("Дата транзакции: "+t.dateCreated.toString());
+            System.out.println("Тип транзакции: "+t.type);
+            System.out.println("Сумма транзакции: "+ t.amount );
+            System.out.println("Баланс после проведения транзакции: "+t.balance);
+            System.out.println("Краткое описание транзакции: "+t.description+"\n");
+        }
+    }
     public int getId() {
         return id;
     }
