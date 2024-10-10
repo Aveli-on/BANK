@@ -24,7 +24,6 @@ public class Main {
         System.out.println("Дата создания : " + account.getDateCreated());
         account.showTransactions();
         System.out.println("===================================================");
-
         //Menu men=new Menu();
        //men.show();
 

@@ -21,7 +21,6 @@ public class Account {
         accounts.add(this);
         this.dateCreated = Date.from(Instant.now());
         //transactions.add(new Transaction(Date.from(Instant.now()),'!',balance,balance,"Создание счета"));
-
     }
     Account(int id, double balance, String name){
         this.id=id;
@@ -30,7 +29,6 @@ public class Account {
         accounts.add(this);
         this.dateCreated = Date.from(Instant.now());
         //transactions.add(new Transaction(Date.from(Instant.now()),'!',balance,balance,"Создание счета"));
-
     }
     public String getname(){
         return name;

@@ -9,7 +9,6 @@ public class Menu {
 
         Scanner in=new Scanner(System.in);
         while (true) {
-
             while (true) {
                 try {
                     System.out.println("Введите ID клиента: ");
