@@ -7,9 +7,11 @@ import java.util.List;
 
 public class Account {
     private int id;
+    private String name;
     private double balance;
     private double annualInterestRate;
     private static List<Account> accounts = new ArrayList<Account>();
+    private static List<Transaction> transactions = new ArrayList<Transaction>();
     private Date dateCreated;
     Account(){
     }
@@ -18,6 +20,16 @@ public class Account {
         this.balance=balance;
         accounts.add(this);
         this.dateCreated = Date.from(Instant.now());
+        //transactions.add(new Transaction(Date.from(Instant.now()),'!',balance,balance,"Создание счета"));
+
+    }
+    Account(int id, double balance, String name){
+        this.id=id;
+        this.name=name;
+        this.balance=balance;
+        accounts.add(this);
+        this.dateCreated = Date.from(Instant.now());
+        //transactions.add(new Transaction(Date.from(Instant.now()),'!',balance,balance,"Создание счета"));
 
     }
 
@@ -58,13 +70,16 @@ public class Account {
         if (amount <= balance) {
             balance -= amount;
             System.out.println("Сумма снята со счета!");
+            transactions.add(new Transaction(Date.from(Instant.now()),'-',amount,balance,"Снятие со счета"));
         } else {
             System.out.println("Недостаточно средств на счёте.");
         }
+
     }
     public void deposit(double amount){
         balance+=amount;
         System.out.println("Депозит успешно введен!");
+        transactions.add(new Transaction(Date.from(Instant.now()),'+',amount,balance,"Пополнение счета"));
     }
     public static Account findAccountById(List<Account> accounts, int id) throws IllegalArgumentException {
         for (Account account : accounts) {
