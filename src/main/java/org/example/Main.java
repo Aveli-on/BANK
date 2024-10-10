@@ -16,14 +16,14 @@ public class Main {
         account.withdraw(700);
         account.withdraw(600);
         account.withdraw(100);
-        System.out.println("===================================================");
+        System.out.println("==================================================");
         System.out.println("Номер счета : " + account.getId());
         System.out.println("Имя владельца : " + account.getname());
-        System.out.println("Balance : " + account.getBalance());
+        System.out.println("Баланс : " + account.getBalance());
         System.out.println("Месячная ставка : " + account.getMonthlyInterest());
         System.out.println("Дата создания : " + account.getDateCreated());
         account.showTransactions();
-        System.out.println("===================================================");
+        System.out.println("==================================================");
         //Menu men=new Menu();
        //men.show();
 

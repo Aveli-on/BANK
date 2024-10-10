@@ -14,5 +14,6 @@ public class Transaction {
         this.amount = amount;
         this.balance = balance;
         this.description = description;
+
     }
 }
